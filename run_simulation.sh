@@ -1,0 +1,1 @@
+./model/model $1 res/simulation-0.conf res/2020-03-09-18:00-FERRUM-[600:700:10][-5:+5:0.2].npy log/10_LUNEV_MACHINE.txt
