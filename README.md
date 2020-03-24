@@ -4,6 +4,4 @@
 
 Для установки: `make install`.
 
-Для прогона теста: ``make test``.
-
-Будет сгенерён лог ``log/10_LUNEV_MACHINE.txt``. Скиньте мне его, пожалуйста.
+Для прогона теста: `sh run_simulation.sh <num_threads>`.
