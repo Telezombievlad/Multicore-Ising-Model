@@ -2,7 +2,7 @@
 # COMPILER FLAGS #
 #================#
 
-CCFLAGS += -std=c++17 -Werror -Wall -O0 -pthread
+CCFLAGS += -std=c++11 -Werror -Wall -O0 -pthread
 
 #==============#
 # INSTALLATION #
