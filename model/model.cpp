@@ -6,7 +6,7 @@
 #include "Model.hpp"
 #include "ThreadCoreScalability.hpp"
 
-#include "vendor/cnpy/cnpy.h"
+// #include "vendor/cnpy/cnpy.h"
 
 #include <signal.h>
 #include <sys/times.h>
@@ -167,7 +167,7 @@ int main(int argc, char** argv)
 	}
 
 	const char* config_filename = argv[2];
-	const char* output_filename = argv[3];
+	// const char* output_filename = argv[3];
 	const char* log_filename    = argv[4];
 
 	//=========================//
@@ -287,7 +287,7 @@ int main(int argc, char** argv)
 	// Aggregate results in python-compatible format //
 	//===============================================//
 
-	cnpy::npy_save(output_filename, &samples_to_save, {num_samples, 3}, "a");
+	// cnpy::npy_save(output_filename, &samples_to_save, {num_samples, 3}, "a");
 
 	printf("[ISING-MODEL] Data aggregated!\n");
 

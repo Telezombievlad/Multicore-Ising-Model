@@ -8,12 +8,15 @@ CCFLAGS += -std=c++17 -Werror -Wall -O0 -pthread
 # INSTALLATION #
 #==============#
 
-install : 
-	# cnpy installation
-	git clone https://github.com/rogersce/cnpy.git model/vendor/cnpy
-	mkdir -p model/vendor model/vendor/cnpy/build log
-	cd model/vendor/cnpy/build && cmake ..
-	cd model/vendor/cnpy/build && sudo make && sudo make install
+# install : 
+# 	# cnpy installation
+# 	git clone https://github.com/rogersce/cnpy.git model/vendor/cnpy
+# 	mkdir -p model/vendor model/vendor/cnpy/build log
+# 	cd model/vendor/cnpy/build && cmake ..
+# 	cd model/vendor/cnpy/build && sudo make && sudo make install
+
+# clean : 
+
 
 #============#
 # CNPY STUFF #
@@ -33,14 +36,14 @@ MODEL_EXE  = model/model
 RENDER_EXE = model/render
 
 compile_model : ${MODEL_SRC} ${MODEL_HDRS}
-	g++ ${CCFLAGS} ${MODEL_SRC} -o ${MODEL_EXE} ${LINK_TO_CNPY_FLAGS}
+	g++ ${CCFLAGS} ${MODEL_SRC} -o ${MODEL_EXE} # ${LINK_TO_CNPY_FLAGS}
 
 compile_rendering : ${RENDER_SRC} ${MODEL_HDRS}
 	g++ ${CCFLAGS} ${RENDER_SRC} -o ${RENDER_EXE}
 
 compile_profile : ${MODEL_SRC} ${MODEL_HDRS}
-	g++ -S ${CCFLAGS} -g ${MODEL_SRC} -o ${MODEL_ASM} ${LINK_TO_CNPY_FLAGS}
-	g++    ${CCFLAGS} -g ${MODEL_SRC} -o ${MODEL_EXE} ${LINK_TO_CNPY_FLAGS}
+	g++ -S ${CCFLAGS} -g ${MODEL_SRC} -o ${MODEL_ASM} # ${LINK_TO_CNPY_FLAGS}
+	g++    ${CCFLAGS} -g ${MODEL_SRC} -o ${MODEL_EXE} # ${LINK_TO_CNPY_FLAGS}
 
 #===========#
 # EXECUTION #
