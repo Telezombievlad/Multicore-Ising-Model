@@ -11,7 +11,7 @@ CCFLAGS += -std=c++17 -Werror -Wall -O0 -pthread
 install : 
 	# cnpy installation
 	git clone https://github.com/rogersce/cnpy.git model/vendor/cnpy
-	mkdir -p model/vendor model/vendor/cnpy/build
+	mkdir -p model/vendor model/vendor/cnpy/build log
 	cd model/vendor/cnpy/build && cmake ..
 	cd model/vendor/cnpy/build && sudo make && sudo make install
 
