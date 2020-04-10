@@ -54,7 +54,7 @@ CONFIG_FILE = res/simulation-0.conf
 render : ${RENDER_EXE}
 	${RENDER_EXE} ${CONFIG_FILE}
 
-LOG_FILE  = log/14_BIG_LOAD_LUNEV.log
+LOG_FILE  = log/16_PERF_BATTLES.log
 DATA_FILE = res/2020-03-09-18:00-FERRUM-[600:700:10][-5:+5:0.2].npy
 
 test_ladder : compile_model

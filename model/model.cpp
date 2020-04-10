@@ -124,8 +124,8 @@ void* compute_ising_model_sample(void* arg)
 			if (total_sample % comp_info->num_threads != thr_info->thread_index) continue;
 
 			// Printout computation step:
-			printf("[ISING-MODEL] (%02d) Computing for T=%6.1lf H=%5.1lf sample=%02d/%02d\n",
-			       thr_info->thread_index, temp_cur, field_cur, sample + 1, comp_info->samples_per_point);
+			// printf("[ISING-MODEL] (%02d) Computing for T=%6.1lf H=%5.1lf sample=%02d/%02d\n",
+			//        thr_info->thread_index, temp_cur, field_cur, sample + 1, comp_info->samples_per_point);
 
 			// Initialize lattice for exact computation:
 			lattice.temperature = temp_cur  * 1.38e-23;

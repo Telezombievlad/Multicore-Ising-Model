@@ -132,8 +132,8 @@ cpu_set_t assign_hardware_thread(CpuInfo* cpu_info)
 		exit(EXIT_FAILURE);
 	}
 
-	cpu_set_t assigned_harts;
-	CPU_ZERO(&assigned_harts);
+	cpu_set_t assigned_hart;
+	CPU_ZERO(&assigned_hart);
 
 	for (unsigned passed_harts = 0;
 		 passed_harts < cpu_info->hart_arr_size;
@@ -142,9 +142,9 @@ cpu_set_t assign_hardware_thread(CpuInfo* cpu_info)
 	{
 		if (CPU_ISSET(cpu_info->current_hart, &cpu_info->online_harts))
 		{
-			CPU_SET(cpu_info->current_hart, &assigned_harts);
+			CPU_SET(cpu_info->current_hart, &assigned_hart);
 
-			printf("[THREAD-CORE-SCALABILITY] Giving out hardware thread %d\n", cpu_info->current_hart);
+			// printf("[THREAD-CORE-SCALABILITY] Giving out hardware thread %d\n", cpu_info->current_hart);
 
 			cpu_info->assigned_harts += 1;
 			cpu_info->current_hart = (cpu_info->current_hart + 1) % cpu_info->hart_arr_size;
@@ -153,7 +153,7 @@ cpu_set_t assign_hardware_thread(CpuInfo* cpu_info)
 		}
 	}
 
-	return assigned_harts;
+	return assigned_hart;
 }
 
 void create_anchored_thread(pthread_t* thread, void* (*computation)(void*), void* arg,
@@ -267,7 +267,7 @@ void fill_with_parasite_threads(CpuInfo* cpu_info)
 			exit(EXIT_FAILURE);
 		}
 
-		printf("[THREAD-CORE-SCALABILITY] Created parasite thread on hart %d\n", cpu_info->current_hart);
+		// printf("[THREAD-CORE-SCALABILITY] Created parasite thread on hart %d\n", cpu_info->current_hart);
 		parasites_spawned += 1;
 	} 
 
