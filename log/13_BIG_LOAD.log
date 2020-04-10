@@ -1,0 +1,47 @@
+[LOG] Userspace   time = 296.220 sec
+[LOG] Kernelspace time = 0.020 sec
+[LOG] Real        time = 37.240 sec
+[LOG] Number of threads = 1
+[LOG] Time x Threads = 37.240 sec
+
+[LOG] Userspace   time = 139.070 sec
+[LOG] Kernelspace time = 0.000 sec
+[LOG] Real        time = 17.480 sec
+[LOG] Number of threads = 2
+[LOG] Time x Threads = 34.960 sec
+
+[LOG] Userspace   time = 90.120 sec
+[LOG] Kernelspace time = 0.010 sec
+[LOG] Real        time = 11.340 sec
+[LOG] Number of threads = 3
+[LOG] Time x Threads = 34.020 sec
+
+[LOG] Userspace   time = 67.960 sec
+[LOG] Kernelspace time = 0.000 sec
+[LOG] Real        time = 8.570 sec
+[LOG] Number of threads = 4
+[LOG] Time x Threads = 34.280 sec
+
+[LOG] Userspace   time = 30.080 sec
+[LOG] Kernelspace time = 0.000 sec
+[LOG] Real        time = 6.940 sec
+[LOG] Number of threads = 5
+[LOG] Time x Threads = 34.700 sec
+
+[LOG] Userspace   time = 32.320 sec
+[LOG] Kernelspace time = 0.000 sec
+[LOG] Real        time = 5.850 sec
+[LOG] Number of threads = 6
+[LOG] Time x Threads = 35.100 sec
+
+[LOG] Userspace   time = 33.600 sec
+[LOG] Kernelspace time = 0.000 sec
+[LOG] Real        time = 5.160 sec
+[LOG] Number of threads = 7
+[LOG] Time x Threads = 36.120 sec
+
+[LOG] Userspace   time = 34.780 sec
+[LOG] Kernelspace time = 0.000 sec
+[LOG] Real        time = 4.610 sec
+[LOG] Number of threads = 8
+[LOG] Time x Threads = 36.880 sec
