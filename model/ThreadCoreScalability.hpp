@@ -17,8 +17,6 @@
 // Processor heating:
 #include <cmath>
 
-const unsigned MAX_NUMBER_OF_HARTS = 1024;
-
 //===============================//
 // Cache Line Sharing Prevention //
 //===============================//
